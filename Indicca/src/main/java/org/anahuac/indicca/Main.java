@@ -26,7 +26,6 @@ public class Main {
     	get("/getAllTipoUsuario", (req, res)-> { res.type("application/json"); return gson.toJson(TipoUsuario.class.newInstance().selectTodosTipoUsuario()); } );
     	get("/getTipoUsuarioId","application/json", (req, res)->{ res.type("application/json"); return gson.toJson(TipoUsuario.class.newInstance().selectTipoUsuarioXId(req.queryParams("idTipoUsuario"))); });
     	
-    	
     	post("/createUsuario","application/json", (request, response) -> {
     	    response.type("application/json");
     	    try{
